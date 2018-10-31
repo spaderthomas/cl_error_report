@@ -1,0 +1,44 @@
+﻿  stdafx.cpp
+  ErrorReport.cpp
+c:\users\dboon\programming\error_report\errorreport\errorreport.cpp(16): warning C4307: '*': integral constant overflow
+c:\users\dboon\programming\error_report\errorreport\errorreport.cpp(24): warning C4307: '*': integral constant overflow
+c:\users\dboon\programming\error_report\errorreport\errorreport.cpp(32): warning C4307: '*': integral constant overflow
+c:\users\dboon\programming\error_report\errorreport\errorreport.cpp(42): warning C4307: '*': integral constant overflow
+c:\users\dboon\programming\error_report\errorreport\errorreport.cpp(46): warning C4307: '*': integral constant overflow
+c:\users\dboon\programming\error_report\errorreport\errorreport.cpp(46): fatal error C1001: An internal error has occurred in the compiler.
+  (compiler file 'msc1.cpp', line 1516)
+   To work around this problem, try simplifying or changing the program near the locations listed above.
+  Please choose the Technical Support command on the Visual C++ 
+   Help menu, or open the Technical Support help file for more information
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.14.26428\include\xstddef(142): error C2131: expression did not evaluate to a constant
+  c:\users\dboon\programming\error_report\include\frozen\string.h(51): note: failure was caused by control reaching the end of a constexpr function
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.14.26428\include\xstddef(142): note: while evaluating 'frozen::string::operator ==(&, frozen::string{frozen::string::data_=""name"",frozen::string::size_=0x4})'
+  c:\users\dboon\programming\error_report\include\frozen\unordered_map.h(116): note: while evaluating 'std::equal_to<Key>::operator ()(&, frozen::string{frozen::string::data_=""name"",frozen::string::size_=0x4})'
+          with
+          [
+              Key=frozen::string
+          ]
+  c:\users\dboon\programming\error_report\errorreport\errorreport.cpp(46): note: while evaluating 'frozen::unordered_map<frozen::string,int,3,frozen::elsa<frozen::string>,std::equal_to<Key>>::at(&, frozen::string{frozen::string::data_=""name"",frozen::string::size_=0x4})'
+          with
+          [
+              Key=frozen::string
+          ]
+c:\users\dboon\programming\error_report\include\frozen\unordered_map.h(116): error C2131: expression did not evaluate to a constant
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.14.26428\include\xstddef(142): note: failure was caused by control reaching the end of a constexpr function
+  c:\users\dboon\programming\error_report\include\frozen\unordered_map.h(116): note: while evaluating 'std::equal_to<Key>::operator ()(&, &, &frozen::string{frozen::string::data_=""name"",frozen::string::size_=0x4})'
+          with
+          [
+              Key=frozen::string
+          ]
+  c:\users\dboon\programming\error_report\errorreport\errorreport.cpp(46): note: while evaluating 'frozen::unordered_map<frozen::string,int,3,frozen::elsa<frozen::string>,std::equal_to<Key>>::at(&, &, &frozen::string{frozen::string::data_=""name"",frozen::string::size_=0x4})'
+          with
+          [
+              Key=frozen::string
+          ]
+c:\users\dboon\programming\error_report\errorreport\errorreport.cpp(46): error C2131: expression did not evaluate to a constant
+  c:\users\dboon\programming\error_report\include\frozen\unordered_map.h(116): note: failure was caused by control reaching the end of a constexpr function
+  c:\users\dboon\programming\error_report\errorreport\errorreport.cpp(46): note: while evaluating 'frozen::unordered_map<frozen::string,int,3,frozen::elsa<frozen::string>,std::equal_to<Key>>::at(&, &frozen::string{frozen::string::data_=""name"",frozen::string::size_=0x4})'
+          with
+          [
+              Key=frozen::string
+          ]

@@ -1,0 +1,84 @@
+----------------
+Output of cl /Bv
+----------------
+c:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.
+14.26428\bin\HostX86\x86\cl.exe:        Version 19.14.26431.0
+ c:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.
+14.26428\bin\HostX86\x86\c1.dll:        Version 19.14.26431.0
+ c:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.
+14.26428\bin\HostX86\x86\c1xx.dll:      Version 19.14.26431.0
+ c:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.
+14.26428\bin\HostX86\x86\c2.dll:        Version 19.14.26431.0
+ c:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.
+14.26428\bin\HostX86\x86\link.exe:      Version 14.14.26431.0
+ c:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.
+14.26428\bin\HostX86\x86\mspdb140.dll:  Version 14.14.26431.0
+ c:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.
+14.26428\bin\HostX86\x86\1033\clui.dll: Version 19.14.26431.0
+
+
+----------------
+Input to cl.exe
+----------------
+/c /ZI /nologo /W3 /WX- /diagnostics:classic /sdl /Od /Oy- /D WIN32 /D _DEBUG /D
+_CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise
+/permissive- /Zc:wchar_t /Zc:forScope /Zc:inline /Yc"stdafx.h"
+/Fp"DEBUG\ERRORREPORT.PCH" /Fo"DEBUG\\" /Fd"DEBUG\VC141.PDB" /Gd /TP /analyze-
+/FC C:\USERS\DBOON\PROGRAMMING\ERROR_REPORT\ERRORREPORT\STDAFX.CPP
+
+
+----------------
+Exact error message
+----------------
+1>------ Build started: Project: ErrorReport, Configuration: Release x64 ------
+1>ErrorReport.cpp
+1>c:\users\dboon\programming\error_report\errorreport\errorreport.cpp(16): warning C4307: '*': integral constant overflow
+1>c:\users\dboon\programming\error_report\errorreport\errorreport.cpp(24): warning C4307: '*': integral constant overflow
+1>c:\users\dboon\programming\error_report\errorreport\errorreport.cpp(32): warning C4307: '*': integral constant overflow
+1>c:\users\dboon\programming\error_report\errorreport\errorreport.cpp(42): warning C4307: '*': integral constant overflow
+1>c:\users\dboon\programming\error_report\errorreport\errorreport.cpp(46): warning C4307: '*': integral constant overflow
+1>c:\users\dboon\programming\error_report\errorreport\errorreport.cpp(46): fatal error C1001: An internal error has occurred in the compiler.
+1>(compiler file 'msc1.cpp', line 1516)
+1> To work around this problem, try simplifying or changing the program near the locations listed above.
+1>Please choose the Technical Support command on the Visual C++
+1> Help menu, or open the Technical Support help file for more information
+1>c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.14.26428\include\xstddef(142): error C2131: expression did not evaluate to a constant
+1>c:\users\dboon\programming\error_report\include\frozen\string.h(51): note: failure was caused by control reaching the end of a constexpr function
+1>c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.14.26428\include\xstddef(142): note: while evaluating 'frozen::string::operator ==(&, frozen::string{frozen::string::data_=""name"",frozen::string::size_=0x4})'
+1>c:\users\dboon\programming\error_report\include\frozen\unordered_map.h(116): note: while evaluating 'std::equal_to<Key>::operator ()(&, frozen::string{frozen::string::data_=""name"",frozen::string::size_=0x4})'
+1>        with
+1>        [
+1>            Key=frozen::string
+1>        ]
+1>c:\users\dboon\programming\error_report\errorreport\errorreport.cpp(46): note: while evaluating 'frozen::unordered_map<frozen::string,int,3,frozen::elsa<frozen::string>,std::equal_to<Key>>::at(&, frozen::string{frozen::string::data_=""name"",frozen::string::size_=0x4})'
+1>        with
+1>        [
+1>            Key=frozen::string
+1>        ]
+1>c:\users\dboon\programming\error_report\include\frozen\unordered_map.h(116): error C2131: expression did not evaluate to a constant
+1>c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.14.26428\include\xstddef(142): note: failure was caused by control reaching the end of a constexpr function
+1>c:\users\dboon\programming\error_report\include\frozen\unordered_map.h(116): note: while evaluating 'std::equal_to<Key>::operator ()(&, &, &frozen::string{frozen::string::data_=""name"",frozen::string::size_=0x4})'
+1>        with
+1>        [
+1>            Key=frozen::string
+1>        ]
+1>c:\users\dboon\programming\error_report\errorreport\errorreport.cpp(46): note: while evaluating 'frozen::unordered_map<frozen::string,int,3,frozen::elsa<frozen::string>,std::equal_to<Key>>::at(&, &, &frozen::string{frozen::string::data_=""name"",frozen::string::size_=0x4})'
+1>        with
+1>        [
+1>            Key=frozen::string
+1>        ]
+1>c:\users\dboon\programming\error_report\errorreport\errorreport.cpp(46): error C2131: expression did not evaluate to a constant
+1>c:\users\dboon\programming\error_report\include\frozen\unordered_map.h(116): note: failure was caused by control reaching the end of a constexpr function
+1>c:\users\dboon\programming\error_report\errorreport\errorreport.cpp(46): note: while evaluating 'frozen::unordered_map<frozen::string,int,3,frozen::elsa<frozen::string>,std::equal_to<Key>>::at(&, &frozen::string{frozen::string::data_=""name"",frozen::string::size_=0x4})'
+1>        with
+1>        [
+1>            Key=frozen::string
+1>        ]
+1>Done building project "ErrorReport.vcxproj" -- FAILED.
+========== Build: 0 succeeded, 1 failed, 0 up-to-date, 0 skipped ==========
+
+----------------
+Description
+----------------
+Using a library which provides a small constexpr unordered_map and nested
+templating, the compiler is unable to produce a constexpr. 
